@@ -7,8 +7,8 @@ BUILD := build
 SOURCES := source
 INCLUDES := include
 
-APP_TITLE := Super Mario 3D Land Mod Manager
-APP_DESCRIPTION := Manage compatible Super Mario 3D Land mods
+APP_TITLE := SM3D Land Mod Manager
+APP_DESCRIPTION := Super Mario 3D Land Mod Manager
 APP_AUTHOR := Homebrew Community
 APP_VERSION := 1.0.0
 
