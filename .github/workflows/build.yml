@@ -1,16 +1,5 @@
 
-name: Build 3DS Homebrew Test
-
-      
-              - name: Check source files
-        run: |
-          pwd
-          ls -la
-          ls -la source
-          grep -n "int main" source/main.cpp
-
-      - name: Build application
-        run: make
+name: Build 3DS Homebrew
 
 on:
   push:
@@ -25,6 +14,13 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v4
+
+      - name: Check source files
+        run: |
+          pwd
+          ls -la
+          ls -la source
+          grep -n "int main" source/main.cpp
 
       - name: Build application
         run: make
