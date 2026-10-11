@@ -31,15 +31,21 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
+
 TARGET := sm3dland_mod_manager
-BUILD		:=	build
-SOURCES		:=	source
-DATA		:=	data
-INCLUDES	:=	include
-GRAPHICS	:=	gfx
-GFXBUILD	:=	$(BUILD)
-#ROMFS		:=	romfs
-#GFXBUILD	:=	$(ROMFS)/gfx
+BUILD := build
+SOURCES := source
+DATA := data
+INCLUDES := include
+GRAPHICS := gfx
+GFXBUILD := $(BUILD)
+
+APP_TITLE := SM3D Land Mod Manager
+APP_DESCRIPTION := Super Mario 3D Land Mod Manager
+APP_AUTHOR := Homebrew Community
+
+#ROMFS := romfs
+
 
 #---------------------------------------------------------------------------------
 # options for code generation
