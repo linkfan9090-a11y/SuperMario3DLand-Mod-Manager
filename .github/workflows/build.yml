@@ -1,6 +1,17 @@
 
 name: Build 3DS Homebrew
 
+      
+              - name: Check source files
+        run: |
+          pwd
+          ls -la
+          ls -la source
+          grep -n "int main" source/main.cpp
+
+      - name: Build application
+        run: make
+
 on:
   push:
   workflow_dispatch:
