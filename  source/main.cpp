@@ -8,28 +8,19 @@ int main(int argc, char* argv[])
     (void)argv;
 
     gfxInitDefault();
-    consoleInit(GFX_TOP, nullptr);
+    consoleInit(GFX_TOP, NULL);
 
     printf("Super Mario 3D Land\n");
-    printf("     Mod Manager\n");
-    printf("--------------------------\n\n");
-    printf("Homebrew Mod Manager\n\n");
-    printf("Planned features:\n");
-    printf("- Browse compatible mods\n");
-    printf("- Manage installed mods\n");
-    printf("- View mod information\n\n");
+    printf("Mod Manager\n\n");
+    printf("Build test successful!\n\n");
     printf("Press START to exit.");
 
     while (aptMainLoop())
     {
         hidScanInput();
 
-        u32 kDown = hidKeysDown();
-
-        if (kDown & KEY_START)
-        {
+        if (hidKeysDown() & KEY_START)
             break;
-        }
 
         gspWaitForVBlank();
         gfxSwapBuffers();
