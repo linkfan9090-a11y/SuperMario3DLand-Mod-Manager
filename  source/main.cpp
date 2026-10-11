@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 
         if (hidKeysDown() & KEY_START)
             break;
-
+ 
         gspWaitForVBlank();
         gfxSwapBuffers();
     }
