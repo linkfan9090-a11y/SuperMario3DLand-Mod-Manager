@@ -1,0 +1,29 @@
+
+name: Build 3DS Homebrew
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Build application
+        run: make
+
+      - name: Upload 3DS build
+        uses: actions/upload-artifact@v4
+        with:
+          name: sm3dland-mod-manager
+          path: |
+            sm3dland_mod_manager.3dsx
+            sm3dland_mod_manager.smdh
+            sm3dland_mod_manager.elf
+          if-no-files-found: error
