@@ -1,5 +1,5 @@
 
-name: Build 3DS Homebrew
+name: Build 3DS Homebrew Test
 
       
               - name: Check source files
